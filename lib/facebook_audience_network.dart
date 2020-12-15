@@ -110,10 +110,14 @@ class FacebookAudienceNetwork {
   /// ```
   static Future<bool> loadRewardedVideoAd({
     String placementId = "YOUR_PLACEMENT_ID",
+    String userId,
+    String currency,
     Function(RewardedVideoAdResult, dynamic) listener,
   }) async {
     return await FacebookRewardedVideoAd.loadRewardedVideoAd(
       placementId: placementId,
+      userId: userId,
+      currency: currency,
       listener: listener,
     );
   }

@@ -47,11 +47,15 @@ class FacebookRewardedVideoAd {
   /// ```
   static Future<bool> loadRewardedVideoAd({
     String placementId = "YOUR_PLACEMENT_ID",
+    String userId,
+    String currency,
     Function(RewardedVideoAdResult, dynamic) listener,
   }) async {
     try {
       final args = <String, dynamic>{
         "id": placementId,
+        "userId": userId,
+        "currency": currency
       };
       
       if(Platform.isIOS)
